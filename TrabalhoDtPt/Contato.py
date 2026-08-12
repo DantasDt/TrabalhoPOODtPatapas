@@ -4,5 +4,4 @@ class Contato:
         self.__contato = contato
 
     def MostraContato(self):
-        self.__contato
-        
+        return f"Contato do time: {self.__contato}"
