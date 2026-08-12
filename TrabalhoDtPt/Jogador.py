@@ -7,4 +7,21 @@ class Jogador:
         self.__contrato = contrato
 
     def AlterarNumero(self):
-        self.__numero
+        num = int(input("Informe o novo numero: "))
+        self.__numero = num
+        return self.__numero
+
+    def GetNome(self):
+        return self.__nome
+    
+    def GetIdade(self):
+        return self.__idade
+    
+    def GetPosicao(self):
+        return self.__posicao
+    
+    def GetNumero(self):
+        return self.__numero
+    
+    def GetContrato(self):
+        return self.__contrato
