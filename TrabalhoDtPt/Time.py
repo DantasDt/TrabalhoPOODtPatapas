@@ -1,10 +1,12 @@
 from Jogador import Jogador
 
 class Time:
-    def __init__(self, nome, anoF, titulos):
+    def __init__(self, nome, anoF, titulos, tecnico):
         self.__nome = nome
         self.__anoF = anoF
         self.__titulos = titulos
+        self.__tecnico = tecnico
+        self.__categoria = "Profissional"
         self.__jogadores = []
 
     def DisputarPartida(self):
@@ -24,7 +26,6 @@ class Time:
 
     def AdicionarJogador(self, jogador):
         self.__jogadores.append(jogador)
-        
 
     def JogadorDestaque(self):
         self.__nome
@@ -40,3 +41,9 @@ class Time:
     
     def GetJogadores(self):
         return self.__jogadores
+
+    def GetTecnico(self):
+        return self.__tecnico
+
+    def GetCategoria(self):
+        return self.__categoria
