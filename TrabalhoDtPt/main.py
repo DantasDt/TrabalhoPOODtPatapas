@@ -3,15 +3,13 @@ from Jogador import Jogador
 from Base import Base
 from Time import Time
 from Tecnico import Tecnico
+from Contato import Contato
 from dadosJson import SalvarTime
 from dadosJson import SalvarBase
 from dadosJson import CarregarBase
 from dadosJson import CarregarTime
-try:
-    objTime = CarregarTime()
-    objBase = CarregarBase()
-except:
-    print("Nada a carregar")
+objTime = CarregarTime()
+objBase = CarregarBase()
 
 while True:
     x = input("Oque vai alterar: ").lower()
@@ -35,8 +33,11 @@ while True:
             AnosT = int(input("Informe os anos trabalhados: "))
             IdadeT = input("Informe a idade do tecnico: ")
             Esquema = input("Informe o esquema tatico: ")
+            TipoC = input("Informe o tipo de contato: ")
+            ContatoC = input("Informe o contato: ")
+            objContato = Contato(TipoC, ContatoC)
             objTec = Tecnico(NomeT, TitulosT, AnosT, IdadeT, Nome, Esquema)
-            objTime = Time(Nome, AnoF, Titulos, NomeT)
+            objTime = Time(Nome, AnoF, Titulos, objTec, objContato)
             SalvarTime(objTime)
             os.system("cls")
 
@@ -53,8 +54,11 @@ while True:
             AnosT = int(input("Informe os anos trabalhados: "))
             IdadeT = input("Informe a idade do tecnico: ")
             Esquema = input("Informe o esquema tatico: ")
+            TipoC = input("Informe o tipo de contato: ")
+            ContatoC = input("Informe o contato: ")
+            objContato = Contato(TipoC, ContatoC)
             objTec = Tecnico(NomeT, TitulosT, AnosT, IdadeT, Nome, Esquema)
-            objBase = Base(Nome, AnoF, Titulos, NomeT, Categoria)
+            objBase = Base(Nome, AnoF, Titulos, objTec, objContato, Categoria)
             SalvarBase(objBase)
             os.system("cls") 
 
