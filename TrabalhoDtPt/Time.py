@@ -1,4 +1,5 @@
 from Jogador import Jogador
+from Contato import Contato
 
 class Time:
     def __init__(self, nome, anoF, titulos, tecnico, contato):
@@ -6,7 +7,10 @@ class Time:
         self.__anoF = anoF
         self.__titulos = titulos
         self.__tecnico = tecnico
-        self.__contato = contato
+        if isinstance(contato, Contato):
+            self.__contato = contato
+        else:
+            self.__contato = Contato(contato[0], contato[1])
         self.__jogadores = []
 
     def DisputarPartida(self):
@@ -44,9 +48,6 @@ class Time:
 
     def GetTecnico(self):
         return self.__tecnico
-
-    def GetCategoria(self):
-        return self.__categoria
 
     def GetContato(self):
         return self.__contato
