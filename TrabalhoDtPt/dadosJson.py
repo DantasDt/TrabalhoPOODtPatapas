@@ -45,7 +45,8 @@ def CarregarTime():
             dados = json.load(arquivo)
     except (FileNotFoundError, json.JSONDecodeError):
         tecnico = Tecnico("", "", 0, "", "", "")
-        return Time("", 0, "", "", "")
+        contato = Contato("", "")
+        return Time("", 0, "", tecnico, contato)
 
     contato = Contato(
         dados["time"]["contato"]["tipo"],
@@ -123,7 +124,8 @@ def CarregarBase():
             dados = json.load(arquivo)
     except (FileNotFoundError, json.JSONDecodeError):
         tecnico = Tecnico("", "", 0, "", "", "")
-        return Base("", 0, "", "", "", "")
+        contato = Contato("", "")
+        return Base("", 0, "", tecnico, contato, "")
 
     contato = Contato(
             dados["base"]["contato"]["tipo"],
