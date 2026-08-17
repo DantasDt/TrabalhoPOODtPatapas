@@ -3,5 +3,11 @@ class Contato:
         self.__tipo = tipo
         self.__contato = contato
 
-    def MostraContato(self):
+    def Ligar(self):
         return f"Contato do time: {self.__contato}"
+
+    def GetTipo(self):
+        return self.__tipo 
+
+    def GetContato(self):
+        return self.__contato
