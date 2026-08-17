@@ -12,4 +12,21 @@ class Tecnico:
 
     def DarInstrucao(self):
         self.__nome
-        
+
+    def GetNome(self):
+        return self.__nome
+
+    def GetTitulos(self):
+        return self.__titulos
+
+    def GetAnosDeTrabalho(self):
+        return self.__AnosDeTrabalho
+
+    def GetIdade(self):
+        return self.__idade
+
+    def GetTime(self):
+        return self.__time
+
+    def GetEsquema(self):
+        return self.__esquema
