@@ -17,9 +17,9 @@ class Time:
 
     def Contratar(self):
         NomeJ = input("Informe o nome do jogador: ")
-        IdadeJ = input("Informe a idade do jogador: ")
+        IdadeJ = int(input("Informe a idade do jogador: "))
         PosicaoJ = input("Informe a posicao do jogador: ")
-        NumeroJ = input("Informe o numero do jogador: ")
+        NumeroJ = int(input("Informe o numero do jogador: "))
         ContratoJ = input("Informe o contrato do jogador: ")
         jogador = Jogador(NomeJ, IdadeJ, PosicaoJ, NumeroJ, ContratoJ)
         self.__jogadores.append(jogador)
