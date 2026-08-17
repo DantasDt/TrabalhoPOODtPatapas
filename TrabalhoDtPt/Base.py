@@ -3,8 +3,8 @@ from Jogador import Jogador
 from random import *
 
 class Base(Time):
-    def __init__(self, nome, anoF, titulos, tecnico, categoria):
-        super().__init__(nome, anoF, titulos, tecnico)
+    def __init__(self, nome, anoF, titulos, tecnico, contato, categoria):
+        super().__init__(nome, anoF, titulos, tecnico, contato)
         self.__categoria = categoria
         self.__jogadores = []
 
@@ -16,6 +16,12 @@ class Base(Time):
 
     def GetCategoria(self):
         return self.__categoria
+
+    def GetJogadores(self):
+        return self.__jogadores
+
+    def GetContato(self):
+        return self.__contato
 
     def Contratar(self):
         NomeJ = input("Informe o nome do jogador: ")
