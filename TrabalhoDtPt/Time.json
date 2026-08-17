@@ -1,0 +1,35 @@
+{
+    "time": {
+        "nome": "1",
+        "anoF": 1,
+        "titulos": "1",
+        "tecnico": {
+            "nome": "1",
+            "titulos": "1",
+            "anosDeTrabalho": 1,
+            "idade": "1",
+            "time": "1",
+            "esquema": "1"
+        },
+        "contato": {
+            "tipo": "numero",
+            "contato": "31 998959028"
+        }
+    },
+    "jogadores": [
+        {
+            "nome": "Dt ",
+            "idade": "12",
+            "posicao": "12",
+            "numero": "12",
+            "contrato": "12"
+        },
+        {
+            "nome": "patata",
+            "idade": "1",
+            "posicao": "1",
+            "numero": "1",
+            "contrato": "1"
+        }
+    ]
+}
