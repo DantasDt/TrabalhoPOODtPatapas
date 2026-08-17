@@ -24,4 +24,4 @@ class Jogador:
         return self.__numero
     
     def GetContrato(self):
-        return self.__contrat
+        return self.__contrato
