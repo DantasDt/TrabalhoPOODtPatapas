@@ -1,3 +1,6 @@
+import random
+
+ 
 class Tecnico:
     def __init__(self, nome, titulos, AnosDeTrabalho, idade, time, esquema):
         self.__nome = nome
@@ -10,8 +13,20 @@ class Tecnico:
     def DefinirEsquema(self):
         self.__esquema
 
-    def DarInstrucao(self):
-        self.__nome
+
+    def DarInstrucao(self, instrucao1, instrucao2, instrucao3, instrucao4, instrucao5):
+
+        instrucoes = [
+            instrucao1,
+            instrucao2,
+            instrucao3,
+            instrucao4,
+            instrucao5
+        ]
+
+        instrucao = random.choice(instrucoes)
+
+        print(f"{self.__nome}: {instrucao}")
 
     def GetNome(self):
         return self.__nome
@@ -30,3 +45,22 @@ class Tecnico:
 
     def GetEsquema(self):
         return self.__esquema
+
+
+tecnico = Tecnico(
+    "Luan",
+    5,
+    10,
+    45,
+    "Brasil",
+    "4-3-3"
+    )
+
+
+tecnico.DarInstrucao(
+    "Encaixa no canto.",
+    "Controle o movimento.",
+    "Cruza no alto.",
+    "Acalma o jogo.",
+    "Toque mais."
+    )
