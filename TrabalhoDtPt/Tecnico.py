@@ -1,4 +1,5 @@
 import random
+from main import objTime
 
  
 class Tecnico:
@@ -14,19 +15,13 @@ class Tecnico:
         self.__esquema
 
 
-    def DarInstrucao(self, instrucao1, instrucao2, instrucao3, instrucao4, instrucao5):
+    def DarInstrucao(self,nome):
 
-        instrucoes = [
-            instrucao1,
-            instrucao2,
-            instrucao3,
-            instrucao4,
-            instrucao5
-        ]
+        instrucoes = ["Encaixa no canto.","Controle o movimento.","Cruza no alto.","Acalma o jogo.","solta a bola."]
 
         instrucao = random.choice(instrucoes)
 
-        print(f"{self.__nome}: {instrucao}")
+        print(f"{nome}: {instrucao}")
 
     def GetNome(self):
         return self.__nome
@@ -46,21 +41,5 @@ class Tecnico:
     def GetEsquema(self):
         return self.__esquema
 
-
-tecnico = Tecnico(
-    "Luan",
-    5,
-    10,
-    45,
-    "Brasil",
-    "4-3-3"
-    )
-
-
-tecnico.DarInstrucao(
-    "Encaixa no canto.",
-    "Controle o movimento.",
-    "Cruza no alto.",
-    "Acalma o jogo.",
-    "Toque mais."
-    )
+    def EnviarMensagem(self, mensagem):
+        objTime.GetContato().caixa_entrada(self,"tecnico",mensagem)
