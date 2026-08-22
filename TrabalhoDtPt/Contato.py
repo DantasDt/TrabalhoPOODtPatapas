@@ -2,11 +2,9 @@ import random
 from Time import Time
 
 class Contato:
-    def __init__(self, tipo, contato,tecnico, jogador):
+    def __init__(self, tipo, contato):
         self.__tipo = tipo
         self.__contato = contato
-        self.tecnico = tecnico
-        self.jogador = jogador
 
     def Ligar(self):
         return f"Contato do time: {self.__contato}"
@@ -35,6 +33,6 @@ class Contato:
 dialogo= random.choice(dialogos) 
 print(dialogo[0])
 print(dialogo[1])
-dialogo1 = Contato( "Treinador", "Carlos", "Carlos", "Lucas" )
+dialogo1 = Contato("Número", "99895-9028")
 
 dialogo1.Dialogo()
