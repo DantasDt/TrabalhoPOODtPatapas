@@ -1,5 +1,6 @@
 from Jogador import Jogador
 from Contato import Contato
+from random import *
 
 class Time:
     def __init__(self, nome, anoF, titulos, tecnico, contato):
@@ -14,7 +15,8 @@ class Time:
         self.__jogadores = []
 
     def DisputarPartida(self):
-        self.__nome
+        q = ["pt", "dt"]
+        return f"{self.__nome} X {choice(q)}"
 
     def Escalacao(self):
         self.__nome
