@@ -71,5 +71,21 @@ while True:
             SalvarBase(objBase)
             os.system("cls")
 
+    elif x == "jogador":
+        y = input("Oque deseja fazer? ").lower()
+        os.system("cls")
+        if y == "numero":
+            nome = input("Informe o nome do jogador: ")
+            for jogador in objTime.GetJogadores():
+                if jogador.GetNome() == nome:
+                    num = int(input("Informe o novo número: "))
+                    jogador.AlterarNumero(num)
+                    SalvarTime(objTime)
+            
+            for jogador in objBase.GetJogadores():
+                if jogador.GetNome() == nome:
+                    num = int(input("Informe o novo número: "))
+                    jogador.AlterarNumero(num)
+                    SalvarBase(objBase)
     elif x == "sair":
         break
