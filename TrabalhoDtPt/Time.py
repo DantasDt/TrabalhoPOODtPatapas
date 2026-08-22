@@ -15,11 +15,19 @@ class Time:
         self.__jogadores = []
 
     def DisputarPartida(self):
-        q = ["pt", "dt"]
-        return f"{self.__nome} X {choice(q)}"
+
+        q = ["pt", "dt", "galo"]
+        golsfavor= random.randint(1,10)
+        golscontra= random.randint(0,5)
+        
+        return f"{self.__nome} {golsfavor} X {golscontra} {choice(q)}"
 
     def Escalacao(self):
-        self.__nome
+        if len(self.__jogadores) < 11:
+            return "Não há jogadores suficientes no time. Contrate!!!!!!!!!!!!!"
+        else:
+            for jogador in range(0,11):
+                print(f"{self.__jogadores[jogador]}")
 
     def Contratar(self):
         NomeJ = input("Informe o nome do jogador: ")
@@ -34,7 +42,7 @@ class Time:
         self.__jogadores.append(jogador)
 
     def JogadorDestaque(self):
-        self.__nome
+        return f"Jogador Destaque: {self.__jogadores[randint(len(self.__jogadores))]}"
 
     def GetNome(self):
         return self.__nome
@@ -50,6 +58,11 @@ class Time:
 
     def GetTecnico(self):
         return self.__tecnico
+
+    def GetContato(self):
+        return self.__contato
+
+
 
     def GetContato(self):
         return self.__contato
