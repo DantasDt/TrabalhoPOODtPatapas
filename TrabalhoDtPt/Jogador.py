@@ -1,3 +1,5 @@
+from main import objTime 
+
 class Jogador:
     def __init__(self, nome, idade, posicao, numero, contrato):
         self.__nome = nome
@@ -24,3 +26,6 @@ class Jogador:
     
     def GetContrato(self):
         return self.__contrato
+
+    def EnviarMensagem(self, mensagem):
+        objTime.GetContato().caixa_entrada(self,"jogador",mensagem)
