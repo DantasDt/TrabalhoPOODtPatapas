@@ -6,8 +6,7 @@ class Jogador:
         self.__numero = numero
         self.__contrato = contrato
 
-    def AlterarNumero(self):
-        num = int(input("Informe o novo numero: "))
+    def AlterarNumero(self, num):
         self.__numero = num
         return self.__numero
 
