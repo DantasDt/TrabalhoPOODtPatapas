@@ -11,8 +11,6 @@ class Base(Time):
     def JogadorDestaque(self):
         return f"Jogador Destaque: {self.__jogadores[randint(len(self.__jogadores))]}"
 
-    def Promover(self):
-        self.__categoria
 
     def GetCategoria(self):
         return self.__categoria
@@ -31,3 +29,10 @@ class Base(Time):
 
     def AdicionarJogador(self, jogador):
         self.__jogadores.append(jogador)
+
+    def diasParaProf(self):
+        for jogador in self.__jogadores:
+            if jogador.GetIdade() < 20:
+                print(f"{jogador.GetNome()} ainda não subiu para o profissional!!!!!!!")
+            else:
+                print(f"{jogador.GetNome()} já é profissional!!!!!")
